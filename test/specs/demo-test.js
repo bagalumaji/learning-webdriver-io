@@ -8,7 +8,7 @@ describe('demo test', function () {
         await expect(browser).toHaveTitle("Google");
         await expect(browser).toHaveUrl("https://www.google.com/");
     })
-    it.only("orange HRM test", async function () {
+    it("orange HRM test", async function () {
         await browser.url("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
        await browser.maximizeWindow()
         const textBoxUsername =  $("//input[@name='username']");
