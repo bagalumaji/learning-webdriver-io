@@ -17,7 +17,7 @@ describe('demo test', function () {
         await textBoxUsername.setValue("Admin");
         await textBoxPassword.setValue("admin123");
         await btnLogin.click();
-        await(await $("//p[text()=\'manda user\']")).click();
+        await(await $("//img[contains(@class,'userdropdown')]")).click();
         await(await $("//a[text()='Logout']")).click();
     })
 })
