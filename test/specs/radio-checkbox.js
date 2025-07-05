@@ -21,7 +21,7 @@ describe('RadioCheckbox', function () {
             console.log(isSelected);
             const attr = await listList[i].getAttribute('type');
             console.log(attr);
-            await browser.pause(2000);
+            await browser.pause(1000);
         }
 
         // const btnCheckAll =await  $('//input[@value="Check All"]');
