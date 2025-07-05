@@ -27,7 +27,8 @@ describe('RadioCheckbox', function () {
         // const btnCheckAll =await  $('//input[@value="Check All"]');
         // await btnCheckAll.click();
 
-        const btnUnCheckAll = await browser.$('//input[@value="Uncheck All"]');
+        const btnUnCheckAll = await browser.$('//button[text()="Uncheck All"]');
+        await btnUnCheckAll.click();
         await browser.pause(5000);
 
     });
