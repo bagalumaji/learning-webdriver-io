@@ -3,7 +3,14 @@ describe("frame handling", ()=>{
         await browser.url("https://www.lambdatest.com/selenium-playground/iframe-demo/");
         const frame1 =await $("#iFrame1");
         await browser.switchFrame(frame1);
-        await $('//div[text()="Your content."]').setValue("sayaji bagal")
+        await browser.$('//div[text()="Your content."]').setValue("sayaji bagal")
+        const currentUrl = await browser.getUrl();
+        console.log("Current Url : "+currentUrl);
+        const title = await browser.getTitle();
+        console.log("Title : "+title);
+        await browser.switchToParentFrame();
+
+        console.log("title : "+await browser.getTitle());
         await browser.pause(5000);
     })
 })
