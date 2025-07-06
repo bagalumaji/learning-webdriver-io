@@ -11,6 +11,8 @@ describe("frame handling", ()=>{
         await browser.switchToParentFrame();
 
         console.log("title : "+await browser.getTitle());
+        const url = await browser.getUrl();
+        console.log("Current Url : "+url);
         await browser.pause(5000);
     })
 })
