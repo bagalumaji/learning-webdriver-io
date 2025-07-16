@@ -11,13 +11,13 @@ describe('demo test', function () {
     it("orange HRM test", async function () {
         await browser.url("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
        await browser.maximizeWindow()
-        const textBoxUsername =  $("//input[@name='username']");
-        const textBoxPassword =  $("//input[@name='password']");
-        const btnLogin=  $("//button[contains(@class,'login')]");
+        const textBoxUsername =  browser.$("//input[@name='username']");
+        const textBoxPassword =  browser.$("//input[@name='password']");
+        const btnLogin=  browser.$("//button[contains(@class,'login')]");
         await textBoxUsername.setValue("Admin");
         await textBoxPassword.setValue("admin123");
         await btnLogin.click();
-        await(await $("//img[contains(@class,'userdropdown')]")).click();
-        await(await $("//a[text()='Logout']")).click();
+        await(await browser.$("//img[contains(@class,'userdropdown')]")).click();
+        await(await browser.$("//a[text()='Logout']")).click();
     })
 })
