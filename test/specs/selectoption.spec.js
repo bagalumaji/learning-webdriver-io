@@ -1,7 +1,7 @@
 import {browser} from "@wdio/globals";
 
 describe.only('Select Option', () => {
-    it.only('select option test', async () => {
+    it('select option test', async () => {
         await browser.url("https://testautomationpractice.blogspot.com/")
         const select_locator = $("#country")
         await select_locator.selectByVisibleText("Japan");
